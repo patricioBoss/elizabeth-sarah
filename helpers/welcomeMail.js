@@ -22,7 +22,7 @@ export default function welcomeMail(name = "", loginLink) {
               <table cellpadding="0" cellspacing="0" style="font-family: Nunito, sans-serif; font-size: 15px; font-weight: 400; max-width: 600px; border: none; margin: 0 auto; overflow: hidden; background-color: #fff; box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);">
                   <thead>
                       <tr style="background-color: #14609a; padding: 3px 0; border: none; line-height: 68px; text-align: center; color: #fff; font-size: 24px; letter-spacing: 1px;">
-                          <th scope="col"><img style="width: 300px; margin-top: 50px;" src="https://res.cloudinary.com/dkmwt49xd/image/upload/v1739003668/personal/jrzfleupkkctmvvwqt3d.svg" alt=""></th>
+                          <th scope="col"><img style="width: 300px; margin-top: 50px;" src="https://res.cloudinary.com/dfhjrc23t/image/upload/v1755803781/logo_mkstic.svg" alt=""></th>
                       </tr>
                   </thead>
       
