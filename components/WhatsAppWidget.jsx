@@ -6,7 +6,7 @@ const WhatsAppWidget = () => {
   return (
     <FloatingWhatsApp
       accountName="Elizabeth Ryle"
-      avatar="/img/Elizabeth Jane Ross.jpg"
+      avatar="/img/elizabeth-sarah-ryle.jpg"
       buttonClassName="left-[2rem] "
       onClose={() => setOpen(false)}
       onClick={() => setOpen(true)}

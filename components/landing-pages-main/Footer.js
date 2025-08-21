@@ -25,7 +25,7 @@ const social = [
   },
   {
     name: "Mail",
-    href: "mailto:advisor.elizabethjaneross@gmail.com",
+    href: "mailto:advisor.elizabethsarahryle@gmail.com",
     icon: (props) => (
       <svg
         stroke="currentColor"
