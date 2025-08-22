@@ -37,7 +37,7 @@ const Hero = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="mailto:advisor.elizabethsarahryle@gmail.com"
+            href="mailto:elizabethsarahryle@gmail.com"
           >
             <IoIosMail className=" h-[32px] w-[32px]" />
           </a>

@@ -121,7 +121,7 @@ const MorganBlogs = ({ list }) => {
                   Average Assets Under Management
                 </dt>
                 <dd className="order-first text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                  $49 Billion
+                  $463.48 Billion
                 </dd>
               </div>
             </div>
@@ -134,7 +134,7 @@ const MorganBlogs = ({ list }) => {
                   Average Account Size
                 </dt>
                 <dd className="order-first text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                  $5 million
+                  $15 million
                 </dd>
               </div>
             </div>
@@ -147,7 +147,7 @@ const MorganBlogs = ({ list }) => {
                   Total Number of Accounts
                 </dt>
                 <dd className="order-first text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                  821,000
+                  168,915
                 </dd>
               </div>
             </div>

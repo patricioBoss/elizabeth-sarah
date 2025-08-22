@@ -174,19 +174,25 @@ const MyStory = () => {
 };
 const serviceTeam = (
   <div className="p-[1.875rem]">
-    <h4 className=" text-2xl font-bold my-[1.875rem] mt-5">
-      My Story and Services
-    </h4>
-    <h6 className=" font-bold text-lg my-[0.875rem]">
+    <h4 className=" text-2xl font-bold my-[1rem] mt-3">The Service Team</h4>
+    <h6 className=" font-bold text-lg my-[0.5rem]">
       Vince Pravata - Registered Client Service Associate
     </h6>
+    <p className="mb-6">
+      At LPL Financial, our team is made up of experienced advisors and
+      dedicated professionals who put clients first. We work together to provide
+      personalized strategies, backed by industry-leading research and
+      technology. Each advisor brings unique expertise, ensuring clients receive
+      well-rounded guidance. Collaboration is at the core of how we serve, so
+      every client benefits from the strength of our network.
+    </p>
     <div>
       <p className=" text-base">
         <span className=" font-semibold">Phone:</span> +1(432)246-4294
       </p>
       <p className=" text-base">
         <span className=" font-semibold">Email:</span>
-        advisor.elizabethsarahryle@gmail.com
+        elizabethsarahryle@gmail.com
       </p>
     </div>
   </div>
@@ -212,9 +218,9 @@ const MyLocation = (
             height: "400px",
             width: "100%",
           }}
-          center={[35.0274376, -80.9623839]}
+          center={[-80.9623839, 35.0274376]}
         >
-          <Marker coordinates={[35.0274376, -80.9623839]}>
+          <Marker coordinates={[-80.9623839, 35.0274376]}>
             <div
               style={{
                 width: "30px",
@@ -229,7 +235,7 @@ const MyLocation = (
             id="marker"
             layout={{ "icon-image": "marker-15" }}
           >
-            <Feature coordinates={[35.0274376, -80.9623839]} />
+            <Feature coordinates={[-80.9623839, 35.0274376]} />
           </Layer>
         </Map>
         {/* https://www.google.com/maps/place/Folger+Nolan+Fleming+Douglas/@38.899508,-77.0358319,17z/data=!3m2!4b1!5s0x89b7b79619aecd81:0x2a59f5593968e4ee!4m6!3m5!1s0x89b7b7bd8aa530c1:0xd8665b50ba2dba62!8m2!3d38.899508!4d-77.033257!16s%2Fg%2F1tfk9xnr?hl=en&entry=ttu */}
