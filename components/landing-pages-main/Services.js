@@ -108,15 +108,19 @@ const MyStory = () => {
             {more && <br />}
             {more && (
               <span>
-                <span className=" font-semibold">Elizabeth Jane Ross:</span>
-                &quot;As a seasoned business professional with expertise in
-                business development, performance management, and book
-                management, I leverage my skills to drive growth and retention
-                at E*TRADE from Morgan Stanley. With a strong educational
-                background and recent certifications (SIE, Series 7, and Series
-                63), I am passionate about my work and eager to connect with
-                other managers and collaborators to explore new
-                opportunities.&quot;
+                <span className=" font-semibold">Sarah Elizabeth Ryle :</span>
+                &quot; I am a financial advisor with LPL Financial LLC,
+                headquartered in Fort Mill, SC. Since beginning my career in the
+                financial industry in September 2018, I have gained valuable
+                experience working with a wide range of clients, from
+                high-net-worth individuals and corporations to charitable
+                organizations and pension or profit-sharing plans. I hold the
+                Series 6, Series 7, Series 63, and SIE licenses, and I am
+                currently registered in New York, Florida, and Massachusetts.
+                Through LPL Financial—a registered broker/dealer and investment
+                advisor, and a member of FINRA/SIPC—I provide comprehensive
+                services including financial planning, portfolio management, and
+                tailored investment advisory solutions.&quot;
               </span>
             )}
             <br />
@@ -194,9 +198,9 @@ const MyLocation = (
       <div className=" md:flex-1">
         <h4 className=" text-2xl font-bold mb-[14px] mt-5">LOCATION</h4>
         <p className=" text-base ">
-          Harborside 2 200 Hudson Street,
+          1055 LPL W
           <br />
-          Suite 501, Jersey City, NJ 07311
+          Fort Mill, SC 29715, USA
           <br />
           Direct: +1(432)246-4294
         </p>
@@ -208,9 +212,9 @@ const MyLocation = (
             height: "400px",
             width: "100%",
           }}
-          center={[-92.4061892, 34.7730047]}
+          center={[35.0274376, -80.9623839]}
         >
-          <Marker coordinates={[-92.4061892, 34.7730047]}>
+          <Marker coordinates={[35.0274376, -80.9623839]}>
             <div
               style={{
                 width: "30px",
@@ -225,7 +229,7 @@ const MyLocation = (
             id="marker"
             layout={{ "icon-image": "marker-15" }}
           >
-            <Feature coordinates={[-92.4061892, 34.7730047]} />
+            <Feature coordinates={[35.0274376, -80.9623839]} />
           </Layer>
         </Map>
         {/* https://www.google.com/maps/place/Folger+Nolan+Fleming+Douglas/@38.899508,-77.0358319,17z/data=!3m2!4b1!5s0x89b7b79619aecd81:0x2a59f5593968e4ee!4m6!3m5!1s0x89b7b7bd8aa530c1:0xd8665b50ba2dba62!8m2!3d38.899508!4d-77.033257!16s%2Fg%2F1tfk9xnr?hl=en&entry=ttu */}
