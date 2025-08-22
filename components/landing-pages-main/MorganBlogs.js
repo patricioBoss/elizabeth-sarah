@@ -121,7 +121,7 @@ const MorganBlogs = ({ list }) => {
                   Average Assets Under Management
                 </dt>
                 <dd className="order-first text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                  $463.48 Billion
+                  $463 Billion
                 </dd>
               </div>
             </div>
