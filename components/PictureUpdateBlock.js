@@ -53,7 +53,7 @@ function PictureUpdateBlock({ user, url }) {
   const [imageUrl, setImageUrl] = useState("");
   const [progressLoading, setProgressLoading] = useState(false);
   const checkFileSize = useCallback((file) => {
-    if (Math.floor(file.size / 1024 / 1024) <= 1) return true;
+    if (Math.floor(file.size / 1024 / 1024) <= 3) return true;
     return false;
   }, []);
 
