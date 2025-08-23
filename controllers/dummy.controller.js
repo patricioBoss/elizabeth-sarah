@@ -6,7 +6,7 @@ function randomIntFromInterval(min, max) {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
+// https://randomuser.me/api/
 export const createDummy = (type) => async (req, res) => {
   try {
     const lastData = await Dummy.aggregate([
@@ -17,15 +17,17 @@ export const createDummy = (type) => async (req, res) => {
 
     console.log({ lastData });
     const randomRes = await axios({
-      baseURL: "https://random-data-api.com/",
+      baseURL: "https://randomuser.me",
       method: "GET",
-      url: "/api/v2/users",
+      url: "/api/",
     });
     const coinArray = ["btc", "eth", "usdt"];
     const coin = coinArray[Math.floor(Math.random() * coinArray.length)];
-    const fakeUser = randomRes.data;
+    const fakeUser = randomRes.data.results[0];
     const amount = randomIntFromInterval(100000, 600000);
-    const { first_name, last_name } = fakeUser;
+    const {
+      name: { first: first_name, last: last_name },
+    } = fakeUser;
     let newDate;
     if (lastData.length) {
       newDate = add(new Date(lastData[0].approvedAt), {

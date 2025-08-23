@@ -43,16 +43,16 @@ const RandomToast = () => {
       console.log("timeOut Run");
 
       axios({
-        baseURL: "https://random-data-api.com/",
+        baseURL: "https://randomuser.me",
         method: "GET",
-        url: "/api/v2/users",
+        url: "/api/",
       })
         .then((response) => {
           const fakeUser = response.data;
           const amount = randomIntFromInterval(400, 1500);
           const {
-            first_name,
-            address: { state },
+            name: { first: first_name },
+            location: { state },
           } = fakeUser;
           toast.custom(customToast(first_name, state, amount));
         })
