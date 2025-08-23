@@ -10,6 +10,9 @@ import config from "../config/config";
 import sampleMailTemplate from "../helpers/sampleMailTemplate";
 import { fCurrency } from "../utils/formatNumber";
 import sendMail from "../helpers/sendVerificationMail";
+import fs from "fs/promises";
+import path from "path";
+import axios from "axios";
 
 export const getInvestments = async (req, res) => {
   const { _id } = req.profile;
@@ -561,5 +564,48 @@ export const dailyAllInvestRioCheck = async (req, res) => {
     return response(res, 200, "daily investment update successful", null);
   } catch (err) {
     return response(res, 500, "server error", err.message);
+  }
+};
+
+export const updateCoinPrices = async (req, res) => {
+  try {
+    const { data } = await axios.get(
+      "https://rest.coinapi.io/v1/assets?filter_asset_id=BTC,USDT,ETH,XRP,DOGE",
+      {
+        headers: {
+          "X-CoinAPI-Key": "5889e982-099b-4beb-8aab-92cb80183548",
+        },
+      }
+    );
+    const coinPrices = data.reduce((acc, coindata) => {
+      acc[coindata.asset_id] = coindata;
+      return acc;
+    }, {});
+    const filePath = path.join(process.cwd(), "public", "coinData.json");
+    await fs.writeFile(filePath, JSON.stringify(coinPrices, null, 2), "utf-8");
+    return response(res, 200, "success", coinPrices);
+  } catch (error) {
+    console.log("Error fetching coin prices:", error);
+    return response(res, 500, "failure", error.message);
+  }
+};
+
+export const getAllCoinPrices = async () => {
+  try {
+    const filePath = path.join(process.cwd(), "public", "coinData.json");
+    const coinPrices = JSON.parse(await fs.readFile(filePath, "utf-8"));
+    return response(res, 200, "success", coinPrices);
+  } catch (error) {
+    console.log("Error fetching coin prices:", error);
+  }
+};
+
+export const getCoinPrices = async () => {
+  try {
+    const filePath = path.join(process.cwd(), "public", "coinData.json");
+    const coinPrices = JSON.parse(await fs.readFile(filePath, "utf-8"));
+    return coinPrices;
+  } catch (error) {
+    console.log("Error fetching coin prices:", error);
   }
 };

@@ -17,10 +17,11 @@ import PlanCards from "../../components/PlanCards";
 import plans from "../../helpers/plans";
 import { useState } from "react";
 import serializeFields from "../../helpers/serialize";
-import { getCoinPrices, getUserById } from "../../helpers/fetchers";
+import { getUserById } from "../../helpers/fetchers";
 import useSWR from "swr";
 import PropTypes from "prop-types";
 import pageAuth from "../../middleware/pageAuthAccess";
+import { getCoinPrices } from "../../controllers/investment.controller";
 // ----------------------------------------------------------------------
 async function handler({ req }) {
   const user = serializeFields(req.user);

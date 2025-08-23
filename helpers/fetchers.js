@@ -12,20 +12,10 @@ export const getQuotes = async (quoteString) => {
   return await stocksResponse.data.data;
 };
 
-export const getCoinPrices = async () => {
+export const getCoinPricesApi = async () => {
   try {
-    const { data } = await axios.get(
-      "https://rest.coinapi.io/v1/assets?filter_asset_id=BTC,USDT,ETH,XRP,DOGE",
-      {
-        headers: {
-          "X-CoinAPI-Key": "2b05c53a-a524-4860-9313-54254ed539fd",
-        },
-      }
-    );
-    return data.reduce((acc, coindata) => {
-      acc[coindata.asset_id] = coindata;
-      return acc;
-    }, {});
+    const { data } = await axios.get("/api/fetch-coin-prices");
+    return data.data;
   } catch (error) {
     console.log("Error fetching coin prices:", error);
   }

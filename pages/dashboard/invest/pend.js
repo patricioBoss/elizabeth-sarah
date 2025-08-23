@@ -18,7 +18,8 @@ import PropTypes from "prop-types";
 import serializeFields from "../../../helpers/serialize";
 import Investment from "../../../models/investment.model";
 import { useState } from "react";
-import { getCoinPrices, getQuotes } from "../../../helpers/fetchers";
+import { getQuotes } from "../../../helpers/fetchers";
+import { getCoinPrices } from "../../../controllers/investment.controller";
 
 // ----------------------------------------------------------------------
 
