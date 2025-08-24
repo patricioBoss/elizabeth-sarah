@@ -60,7 +60,7 @@ export default function ValidationModal({ open, setOpen, user, url }) {
       },
       accept: { "image/png": [], "image/jpeg": [], "image/jpg": [] },
       maxFiles: 1,
-      // maxSize: 3 * 1024 * 1024,
+      maxSize: 3 * 1024 * 1024,
     });
 
   const hasFile = files.length > 0;
